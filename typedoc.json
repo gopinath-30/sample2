@@ -1,10 +1,8 @@
 {
   "entryPoints": ["src"],
   "out": "docs/api",
-  "exclude": ["**/*.test.ts", "**/*.test.js"],
+  "exclude": ["**/*.test.js", "**/*.test.jsx"],
   "excludePrivate": true,
   "excludeProtected": true,
-  "includeVersion": true,
-  "plugin": ["typedoc-plugin-markdown"],
-  "tsconfig": "tsconfig.json"
+  "includeVersion": true
 }
