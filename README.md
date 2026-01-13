@@ -1,16 +1,82 @@
-# React + Vite
+## sample2 — Vite + React (minimal starter)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal Vite + React sample application used for quick development and experimentation. It includes Hot Module Replacement (HMR), a basic ESLint configuration, and a small demo `App` component with a counter.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vite dev server with HMR
+- React (functional components + hooks)
+- Minimal project structure for quick starts
 
-## React Compiler
+## Prerequisites
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js (v16+ recommended) and npm or Yarn installed on your machine.
 
-## Expanding the ESLint configuration
+## Quick start
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Install dependencies:
+
+```bash
+npm install
+# or
+yarn
+```
+
+2. Start the dev server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+3. Open the app in your browser at the URL shown in the terminal (usually http://localhost:5173).
+
+4. Build for production:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+5. Preview the production build locally:
+
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+## Project structure
+
+- [src/](src) — application source
+	- [App.jsx](src/App.jsx) — main demo component with a counter
+	- [main.jsx](src/main.jsx) — app entry that mounts `App`
+	- [assets/](src/assets) — static assets (e.g., `react.svg`)
+- public/ — static files served at root (e.g., `/vite.svg`)
+- vite.config.js — Vite configuration
+- eslint.config.js — ESLint configuration
+
+## Scripts
+
+- `dev` — start Vite dev server
+- `build` — build production assets
+- `preview` — locally preview production build
+
+Check `package.json` for the exact scripts available.
+
+## Notes about the demo
+
+- The demo `App` component (`src/App.jsx`) is intentionally small and demonstrates:
+	- importing images from `src/assets` and `/vite.svg`
+	- using the `useState` hook for a simple counter
+	- basic styling via `src/App.css`
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+
+## License
+
+This repository does not include a license file. Add a `LICENSE` if you plan to open-source the project.
