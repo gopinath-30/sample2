@@ -1,0 +1,13 @@
+# Doxyfile for branch-3 code documentation
+
+PROJECT_NAME           = "sample2"
+OUTPUT_DIRECTORY       = docs
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+INPUT                  = ./src ./index.html ./vite.config.js
+RECURSIVE              = YES
+EXCLUDE_PATTERNS       = node_modules/* public/*
+FILE_PATTERNS          = *.js *.jsx *.html *.css
+EXTRACT_ALL            = YES
+OPTIMIZE_OUTPUT_FOR_C   = NO
+QUIET                  = YES
