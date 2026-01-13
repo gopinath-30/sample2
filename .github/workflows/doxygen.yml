@@ -1,0 +1,24 @@
+name: Generate Doxygen Docs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-doxygen-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Doxygen
+        run: sudo apt-get update && sudo apt-get install -y doxygen
+
+      - name: Generate Doxygen docs
+        run: doxygen Doxyfile
+
+      - name: Upload docs as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: doxygen-docs
+          path: docs
