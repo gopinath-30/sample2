@@ -19,16 +19,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install TypeDoc
-        run: npm install --save-dev typedoc
-
       - name: Generate docs
-        run: npx typedoc
+        run: npm run docs
 
       - name: Commit docs
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add docs typedoc.json README.md
+          git add docs README.md
           git commit -m "Auto-generate documentation" || echo "No changes"
           git push
