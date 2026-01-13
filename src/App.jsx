@@ -3,8 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+/**
+ * App component
+ * ----------------
+ * Root UI component of the application.
+ * Displays Vite and React logos and a counter example.
+ */
 function App() {
+  /**
+   * count state
+   * Tracks number of button clicks
+   */
   const [count, setCount] = useState(0)
+
 
   return (
     <>
