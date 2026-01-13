@@ -2,9 +2,10 @@
   "name": "sample2",
   "version": "1.0.0",
   "scripts": {
-    "docs": "typedoc --entryPointStrategy expand"
+    "docs": "typedoc --entryPointStrategy expand --includeDeclarations false --plugin typedoc-plugin-jsdoc --excludeExternals false --excludeNotDocumented false --mode file"
   },
   "devDependencies": {
-    "typedoc": "^0.28.5"
+    "typedoc": "^0.28.5",
+    "typedoc-plugin-jsdoc": "^0.4.0"
   }
 }
