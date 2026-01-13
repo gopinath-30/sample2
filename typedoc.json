@@ -1,8 +1,9 @@
 {
   "entryPoints": ["src"],
-  "out": "docs/api",
+  "out": "docs",
   "exclude": ["**/*.test.js", "**/*.test.jsx"],
   "excludePrivate": true,
   "excludeProtected": true,
-  "includeVersion": true
+  "includeVersion": true,
+  "entryPointStrategy": "expand"
 }
