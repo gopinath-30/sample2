@@ -3,8 +3,26 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+/**
+ * App component
+ * 
+ * This is the main React component for the sample2 project.
+ * It displays logos, a counter button, and instructions.
+ * 
+ * @component
+ * @returns {JSX.Element} The rendered component
+ */
 function App() {
+  /**
+   * State variable for counter
+   * @type {[number, function]}
+   */
   const [count, setCount] = useState(0)
+
+  /**
+   * Increment the counter by 1
+   */
+  const increment = () => setCount(count + 1)
 
   return (
     <>
@@ -18,7 +36,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={increment}>
           count is {count}
         </button>
         <p>
