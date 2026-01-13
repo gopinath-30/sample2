@@ -1,13 +1,77 @@
-# Doxyfile for branch-3 code documentation
+# Universal Doxyfile for any code/documentation input
 
+# Project information
 PROJECT_NAME           = "sample2"
+PROJECT_BRIEF          = "Automatically generated documentation for sample2"
+PROJECT_NUMBER         = 1.0
+
+# Output configuration
 OUTPUT_DIRECTORY       = docs
 GENERATE_HTML          = YES
 GENERATE_LATEX         = NO
+HTML_OUTPUT            = html
+HTML_FILE_EXTENSION    = .html
+QUIET                  = YES
+
+# Input files/folders
 INPUT                  = ./src ./index.html ./vite.config.js
 RECURSIVE              = YES
 EXCLUDE_PATTERNS       = node_modules/* public/*
-FILE_PATTERNS          = *.js *.jsx *.html *.css
+
+# File types to parse
+FILE_PATTERNS          = *.*
+
+# Treat unknown extensions as generic text (Doxygen won’t skip them)
+EXTENSION_MAPPING      = js=JavaScript \
+                         jsx=JavaScript \
+                         ts=JavaScript \
+                         tsx=JavaScript \
+                         py=Python \
+                         java=Java \
+                         html=HTML \
+                         css=CSS \
+                         md=Markdown \
+                         sh=Shell \
+                         txt=TEXT \
+                         json=TEXT \
+                         xml=XML \
+                         yaml=YAML \
+                         yml=YAML \
+                         rb=Ruby \
+                         php=PHP \
+                         go=Go \
+                         rs=Rust
+
+# Extract everything
 EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_ANON_NSPACES   = YES
+HIDE_UNDOC_MEMBERS     = NO
+
+# Automatic brief documentation from comments
+JAVADOC_AUTOBRIEF      = YES
+MULTILINE_CPP_IS_BRIEF = YES
+
+# Optimization for output
 OPTIMIZE_OUTPUT_FOR_C   = NO
-QUIET                  = YES
+
+# Source browsing
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# Include files in documentation even if no code
+SHOW_INCLUDE_FILES     = YES
+
+# Optional: treat all files as code to avoid empty docs
+EXTENSION_MAPPING      += "*"=TEXT
+
+# Optional: enable diagrams if Graphviz is installed
+HAVE_DOT               = YES
+DOT_IMAGE_FORMAT       = svg
+CLASS_DIAGRAMS         = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
