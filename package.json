@@ -2,7 +2,7 @@
   "name": "sample2",
   "version": "1.0.0",
   "scripts": {
-    "docs": "typedoc"
+    "docs": "typedoc --entryPointStrategy expand"
   },
   "devDependencies": {
     "typedoc": "^0.28.5"
